@@ -1,9 +1,13 @@
 import javafx.scene.input.KeyCode;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Main extends Frame {
     public int x=0, y=0;
@@ -45,8 +49,18 @@ public class Main extends Frame {
 
     }
 };
+    public BufferedImage im;
     public Main()
     {
+        try {
+            im= ImageIO.read(new File("C:/Users/romanovamk.28/IdeaProjects/game157/src/человек паук.png")); }
+
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
         setTitle("first drawing");
         setSize( 800 ,640);
         setVisible(true);
@@ -58,6 +72,7 @@ public class Main extends Frame {
 
           super.paint(g);
           Graphics2D isa = (Graphics2D) g;
+          g.drawImage(im, x,y,this);
           /*
           g.setColor(Color.YELLOW);
           g.fillOval(100,100,50,50);
@@ -72,8 +87,8 @@ public class Main extends Frame {
           g.setColor(Color.RED);
           */
 
-              g.clearRect(0,0,800,640);
-              g.fillOval(x , y, 50, 50);
+             // g.clearRect(0,0,800,640);
+             // g.fillOval(x , y, 50, 50);
 
     }
     public static void main(String[] args) {
