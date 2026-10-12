@@ -65,4 +65,4 @@ public class menu extends JFrame {
     {
         menu name = new menu();
     }
-}
+} 
