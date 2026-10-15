@@ -22,7 +22,7 @@ public class menu extends JFrame {
             if (e.getPoint().x > 30 && e.getPoint().x < 100 && e.getPoint().y > 50 && e.getPoint().y < 216) {
                 new test2();
                 System.out.println("exit");
-                System.exit(0); 
+                System.exit(0);
             }
         }
 
