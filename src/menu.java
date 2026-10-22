@@ -44,7 +44,7 @@ public class menu extends JFrame {
             button_exit = ImageIO.read(new File("src/picture/домой.png"));
         } catch (Exception e) {
             throw new RuntimeException(e);
-        }
+        } 
         setSize(1280, 904);
         setVisible(true);
         setTitle("game");
