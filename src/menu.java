@@ -38,10 +38,10 @@ public class menu extends JFrame {
 
     menu() {
         try {
-            bg = ImageIO.read(new File("H:/жесть/проект/gameproject/фон.png"));
-            button_start = ImageIO.read(new File("H:/жесть/проект/gameproject/начать.png"));
-            button_setting = ImageIO.read(new File("H:/жесть/проект/gameproject/настройки.png"));
-            button_exit = ImageIO.read(new File("H:/жесть/проект/gameproject/домой.png"));
+            bg = ImageIO.read(new File("src/picture/фон.png"));
+            button_start = ImageIO.read(new File("src/picture/начать.png"));
+            button_setting = ImageIO.read(new File("src/picture/настройки.png"));
+            button_exit = ImageIO.read(new File("src/picture/домой.png"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -55,8 +55,8 @@ public class menu extends JFrame {
         super.paint(g);
         g.drawImage(bg, 0, 0, this);
         g.drawImage(button_start, 40, 70, this);
-        g.drawImage(button_setting, 30, 10, this);
-        g.drawImage(button_exit, 30, 100, this);
+        g.drawImage(button_setting, 500, 100, this);
+        g.drawImage(button_exit, 0, 100, this);
     }
 
     public static void main(String[] args) {
