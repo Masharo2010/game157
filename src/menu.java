@@ -54,8 +54,8 @@ public class menu extends JFrame {
     public void paint(Graphics g) {
         super.paint(g);
         g.drawImage(bg, 0, 0, this);
-        g.drawImage(button_start, 40, 70, this);
-        g.drawImage(button_setting, 500, 100, this);
+        g.drawImage(button_start, 480, 500, this);
+        g.drawImage(button_setting, 450, 100, this);
         g.drawImage(button_exit, 0, 100, this);
     }
 

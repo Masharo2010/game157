@@ -10,7 +10,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Main extends Frame {
-    public int x=0, y=0;
+    public int x=50;
+    public spider[] spiders = new spider[10];
     public KeyListener al=new KeyListener() {
     @Override
     public void keyTyped(KeyEvent e) {
@@ -19,7 +20,7 @@ public class Main extends Frame {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_LEFT)
+      if (e.getKeyCode() == KeyEvent.VK_LEFT)
         {
             x=x-1;
             System.out.println("x");
@@ -31,7 +32,7 @@ public class Main extends Frame {
             System.out.println("x");
             repaint();
         }
-        if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+        /*if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             y = y + 1;
             System.out.println("y");
             repaint();
@@ -40,7 +41,7 @@ public class Main extends Frame {
             y = y - 1;
             System.out.println("y");
             repaint();
-        }
+        }*/
 
     }
 
@@ -65,6 +66,9 @@ public class Main extends Frame {
         setSize( 800 ,640);
         setVisible(true);
         addKeyListener(al);
+        for(int i=0; i<spiders.length; i++){
+            spiders[i]= new spider();
+        }
     }
 
       public void paint(Graphics g)
@@ -73,6 +77,10 @@ public class Main extends Frame {
           super.paint(g);
           Graphics2D isa = (Graphics2D) g;
           g.drawImage(im, x,y,this);
+          for(int i=0; i<spiders.length; i++)
+          {
+              g.drawImage(spiders[i].image, spiders[i].x,spiders[i].y, this);
+          }
           /*
           g.setColor(Color.YELLOW);
           g.fillOval(100,100,50,50);
