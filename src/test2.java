@@ -37,7 +37,7 @@ public class test2 extends JFrame {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        setSize(1280, 904);
+        setSize(1280, 904); 
         setVisible(true);
         setTitle("game");
         addMouseListener(ml);
