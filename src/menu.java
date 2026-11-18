@@ -8,12 +8,13 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 public class menu extends JFrame {
-    public BufferedImage bg, button_start, button_setting, button_exit;
+    public BufferedImage bg, button_start, button_setting, button_exit, bg2;
 
     MouseListener ml = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getPoint().x > 450 && e.getPoint().x < 850 && e.getPoint().y > 500 && e.getPoint().y < 800) {
+                dispose();
                 new test2();
                 System.out.println("start");
             }

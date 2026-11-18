@@ -8,14 +8,20 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 public class test2 extends JFrame {
-    public BufferedImage bg, button_start, button_setting, button_exit;
+    public BufferedImage bg, button_cup, button_setting, button_exit;
 
     MouseListener ml = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            if (e.getPoint().x > 0 && e.getPoint().x < 50 && e.getPoint().y > 50 && e.getPoint().y < 100) {
+            if (e.getPoint().x > 1220 && e.getPoint().x <1270 && e.getPoint().y >10 && e.getPoint().y < 50) {
+                dispose();
                 new menu();
                 System.out.println("exit");
+            }
+            if (e.getPoint().x > 0 && e.getPoint().x <100 && e.getPoint().y >50 && e.getPoint().y < 100) {
+                dispose();
+                new cupboard();
+                System.out.println("go");
             }
         }
 
@@ -31,13 +37,13 @@ public class test2 extends JFrame {
 
     test2() {
         try {
-            bg = ImageIO.read(new File("src/picture/фон.png"));
+            bg = ImageIO.read(new File("src/picture/room_2.jpeg"));
             button_setting = ImageIO.read(new File("src/picture/настройки.png"));
             button_exit = ImageIO.read(new File("src/picture/домой.png"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        setSize(1280, 904); 
+        setSize(1280, 904);
         setVisible(true);
         setTitle("game");
         addMouseListener(ml);
@@ -47,7 +53,7 @@ public class test2 extends JFrame {
         super.paint(g);
         g.drawImage(bg, 0, 0, this);
         g.drawImage(button_setting, 0, 50, this);
-        g.drawImage(button_exit, 0, 100, this);
+        g.drawImage(button_exit, 0, 10, this);
     }
 
     public static void main(String[] args) {
