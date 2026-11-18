@@ -6,7 +6,7 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
-
+ 
 public class menu extends JFrame {
     public BufferedImage bg, button_start, button_setting, button_exit, bg2;
 
