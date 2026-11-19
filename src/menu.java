@@ -1,3 +1,6 @@
+
+
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
 import java.awt.*;
@@ -5,19 +8,22 @@ import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
- 
+
 public class menu extends JFrame {
-    public BufferedImage bg, button_start, button_setting;
+    public BufferedImage bg, button_start, button_setting, button_exit;
 
     MouseListener ml = new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
-            if (e.getPoint().x > 450 && e.getPoint().x < 850 && e.getPoint().y > 500 && e.getPoint().y < 800) {
-                dispose();
+            if (e.getPoint().x > 40 && e.getPoint().x < 70 && e.getPoint().y > 100 && e.getPoint().y < 216) {
                 new test2();
                 System.out.println("start");
             }
-
+            if (e.getPoint().x > 30 && e.getPoint().x < 100 && e.getPoint().y > 50 && e.getPoint().y < 216) {
+                new test2();
+                System.out.println("exit");
+                System.exit(0);
+            }
         }
 
         @Override
@@ -35,6 +41,7 @@ public class menu extends JFrame {
             bg = ImageIO.read(new File("src/picture/фон.png"));
             button_start = ImageIO.read(new File("src/picture/начать.png"));
             button_setting = ImageIO.read(new File("src/picture/настройки.png"));
+            button_exit = ImageIO.read(new File("src/picture/домой.png"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         } 
@@ -47,8 +54,9 @@ public class menu extends JFrame {
     public void paint(Graphics g) {
         super.paint(g);
         g.drawImage(bg, 0, 0, this);
-        g.drawImage(button_start, 480, 500, this);
-        g.drawImage(button_setting, 0, 50, this);
+        g.drawImage(button_start, 40, 70, this);
+        g.drawImage(button_setting, 500, 100, this);
+        g.drawImage(button_exit, 0, 100, this);
     }
 
     public static void main(String[] args) {
