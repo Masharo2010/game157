@@ -1,4 +1,3 @@
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +7,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
  
 public class menu extends JFrame {
-    public BufferedImage bg, button_start, button_setting, button_exit, bg2;
+    public BufferedImage bg, button_start, button_setting;
 
     MouseListener ml = new MouseListener() {
         @Override
@@ -50,7 +49,6 @@ public class menu extends JFrame {
         g.drawImage(bg, 0, 0, this);
         g.drawImage(button_start, 480, 500, this);
         g.drawImage(button_setting, 0, 50, this);
-        g.drawImage(button_exit, 0, 100, this);
     }
 
     public static void main(String[] args) {
