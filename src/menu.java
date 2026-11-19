@@ -42,7 +42,7 @@ public class menu extends JFrame {
         setSize(1280, 904);
         setVisible(true);
         setTitle("game");
-        addMouseListener(ml); 
+        addMouseListener(ml);
     }
 
     public void paint(Graphics g) {
