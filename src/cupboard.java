@@ -36,7 +36,7 @@ public class cupboard extends JPanel {
     private static class DraggableImage {
         BufferedImage image;
         int x, y;
-        Point dragOffset = null; 
+        Point dragOffset = null;
 
         DraggableImage(BufferedImage image, int x, int y) {
             this.image = image;
