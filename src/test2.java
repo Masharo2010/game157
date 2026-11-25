@@ -14,7 +14,7 @@ public class test2 extends JFrame {
         @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getPoint().x > 1220 && e.getPoint().x <1270 && e.getPoint().y >10 && e.getPoint().y < 50) {
-                dispose();
+                dispose(); 
                 new menu();
                 System.out.println("exit");
             }
