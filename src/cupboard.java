@@ -204,7 +204,7 @@ public class cupboard extends JPanel {
         for (DraggableImage item : items) {
             g.drawImage(item.image, item.x, item.y, null);
         }
-    }
+    } 
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
