@@ -197,7 +197,7 @@ public class cupboard extends JPanel {
             g2d.fillRect(0, 0, getWidth(), getHeight());
         }
 
-        // (необязательно) видимая граница зоны появления
+
         g.setColor(new Color(255, 255, 255, 60));
         g.drawLine(0, SPAWN_TOP, getWidth(), SPAWN_TOP);
 

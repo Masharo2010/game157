@@ -1,5 +1,3 @@
-
-
 import java.awt.event.MouseEvent;
 import javax.swing.*;
 import java.awt.*;
@@ -58,7 +56,7 @@ public class menu extends JFrame {
         g.drawImage(button_exit, 0, 100, this);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[ ] args) {
         new menu();
     }
 }

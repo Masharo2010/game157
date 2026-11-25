@@ -1,4 +1,4 @@
-import java.awt.image.BufferedImage;
+/*import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class spider {
@@ -11,3 +11,4 @@ public class spider {
         }
             }
         }
+*/

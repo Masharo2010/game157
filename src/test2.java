@@ -37,7 +37,7 @@ public class test2 extends JFrame {
 
     test2() {
         try {
-            bg = ImageIO.read(new File("src/picture/room_2.jpeg"));
+            bg = ImageIO.read(new File("src/picture/room 2.png"));
             button_setting = ImageIO.read(new File("src/picture/настройки.png"));
             button_exit = ImageIO.read(new File("src/picture/домой.png"));
         } catch (Exception e) {

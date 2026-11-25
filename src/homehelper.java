@@ -1,4 +1,4 @@
-public class homehelper {
+/*public class homehelper {
     public static int x;
     public static int y;
     public static boolean isVisible;
